@@ -18,6 +18,8 @@ module.exports = function (app) {
 
     artistProfileId: { type: Schema.Types.ObjectId, ref: 'artists' },
 
+    venueProfileId: { type: Schema.Types.ObjectId, ref: 'venues' },
+
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now }
   });

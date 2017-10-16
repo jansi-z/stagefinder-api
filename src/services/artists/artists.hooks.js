@@ -1,5 +1,7 @@
 const { authenticate } = require('feathers-authentication').hooks;
 
+const addArtistToUser = require('../../hooks/add-artist-to-user');
+
 module.exports = {
   before: {
     all: [ authenticate('jwt') ],
@@ -15,7 +17,7 @@ module.exports = {
     all: [],
     find: [],
     get: [],
-    create: [],
+    create: [addArtistToUser()],
     update: [],
     patch: [],
     remove: []
