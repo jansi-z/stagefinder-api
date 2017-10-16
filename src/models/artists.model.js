@@ -11,7 +11,7 @@ module.exports = function (app) {
     photo: { type: String, required: true },
     description: { type: String, required: true },
     city: { type: String, required: true},
-    userId: { type: Schema.Types.ObjectId, ref: 'users' },
+    userId: { type: Schema.Types.ObjectId, ref: 'users', required: true },
 
     quote: { type: String },
     video: { type: String },
