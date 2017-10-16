@@ -42,26 +42,21 @@ const newArtist2 = {
   city: 'Leeuwarden',
 };
 
-function newVenue1(newUser){
-  return {
-    name: '\'t Oude Pothuijs',
-    photo: 'https://indebuurt.nl/utrecht/wp-content/uploads/2017/05/1933205_1125776194129083_6220711878051688364_o-e1494507561146.jpg',
-    city: 'Utrecht',
-    address: 'Oudegracht 279',
-    description: 'Al jaren de beste plek voor up and coming bandjes en artiesten in de Domstad',
-    userId: newUser._id };
-}
+const newVenue1 = {
+  name: '\'t Oude Pothuijs',
+  photo: 'https://indebuurt.nl/utrecht/wp-content/uploads/2017/05/1933205_1125776194129083_6220711878051688364_o-e1494507561146.jpg',
+  city: 'Utrecht',
+  address: 'Oudegracht 279',
+  description: 'Al jaren de beste plek voor up and coming bandjes en artiesten in de Domstad',
+};
 
-function newVenue2(newUser){
-  return {
-    name: 'De Melkweg',
-    photo: 'https://www.roarezine.nl/wp-content/uploads/2013/05/frankturnermelkweg-5-BorderMaker.jpg',
-    city: 'Amsterdam',
-    address: 'Lijnbaansgracht 234A',
-    description: 'De plek bij uitstek voor de beste live optredens van Amsterdam',
-    userId: newUser._id,
-  };
-}
+const newVenue2 = {
+  name: 'De Melkweg',
+  photo: 'https://www.roarezine.nl/wp-content/uploads/2013/05/frankturnermelkweg-5-BorderMaker.jpg',
+  city: 'Amsterdam',
+  address: 'Lijnbaansgracht 234A',
+  description: 'De plek bij uitstek voor de beste live optredens van Amsterdam',
+};
 
 feathersClient
   .configure(hooks())
@@ -109,14 +104,14 @@ feathersClient.service('users').create(user2)
   });
 
 feathersClient.service('users').create(user3)
-  .then((newUser3) => {
+  .then(() => {
     feathersClient.authenticate({
       strategy: 'local',
       email: user3.email,
       password: user3.password
     })
       .then(() => {
-        feathersClient.service('venues').create(newVenue1(newUser3))
+        feathersClient.service('venues').create(newVenue1)
           .then((result) => {
             console.log('Venue seeded...', result);
           }).catch((error) => {
@@ -129,14 +124,14 @@ feathersClient.service('users').create(user3)
   });
 
 feathersClient.service('users').create(user4)
-  .then((newUser4) => {
+  .then(() => {
     feathersClient.authenticate({
       strategy: 'local',
       email: user4.email,
       password: user4.password
     })
       .then(() => {
-        feathersClient.service('venues').create(newVenue2(newUser4))
+        feathersClient.service('venues').create(newVenue2)
           .then((result) => {
             console.log('Venue seeded...', result);
           }).catch((error) => {
