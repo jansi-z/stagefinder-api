@@ -28,24 +28,19 @@ const user4 = {
 
 const feathersClient = feathers();
 
-function newArtist1(newUser1){
-  return {
-    name: 'Radiohead',
-    photo: 'https://express-k.kz/upload/iblock/404/404ddda17b2bcfaedcff63948ad8377b.jpg',
-    description: 'We play a mix between schlager, rock \'n roll, and psychedelic folk',
-    city: 'IJmuiden',
-    userId: newUser1._id };
-}
+const newArtist1 = {
+  name: 'Radiohead',
+  photo: 'https://express-k.kz/upload/iblock/404/404ddda17b2bcfaedcff63948ad8377b.jpg',
+  description: 'We play a mix between schlager, rock \'n roll, and psychedelic folk',
+  city: 'IJmuiden',
+};
 
-function newArtist2(newUser2){
-  return {
-    name: 'The Beatles',
-    photo: 'http://www.beatlesource.com/savage/1962/62.03.xx%20suits/02.jpg',
-    description: 'We aim to recreate the 60s sound',
-    city: 'Leeuwarden',
-    userId: newUser2._id,
-  };
-}
+const newArtist2 = {
+  name: 'The Beatles',
+  photo: 'http://www.beatlesource.com/savage/1962/62.03.xx%20suits/02.jpg',
+  description: 'We aim to recreate the 60s sound',
+  city: 'Leeuwarden',
+};
 
 function newVenue1(newUser){
   return {
@@ -74,14 +69,14 @@ feathersClient
   .configure(auth());
 
 feathersClient.service('users').create(user1)
-  .then((newUser1) => {
+  .then(() => {
     feathersClient.authenticate({
       strategy: 'local',
       email: user1.email,
       password: user1.password
     })
       .then(() => {
-        feathersClient.service('artists').create(newArtist1(newUser1))
+        feathersClient.service('artists').create(newArtist1)
           .then((result) => {
             console.log('artist seeded...', result);
           }).catch((error) => {
@@ -94,14 +89,14 @@ feathersClient.service('users').create(user1)
   });
 
 feathersClient.service('users').create(user2)
-  .then((newUser2) => {
+  .then(() => {
     feathersClient.authenticate({
       strategy: 'local',
       email: user2.email,
       password: user2.password
     })
       .then(() => {
-        feathersClient.service('artists').create(newArtist2(newUser2))
+        feathersClient.service('artists').create(newArtist2)
           .then((result) => {
             console.log('artist 2 seeded...', result);
           }).catch((error) => {
