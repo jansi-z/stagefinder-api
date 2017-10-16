@@ -1,11 +1,13 @@
 const { authenticate } = require('feathers-authentication').hooks;
 
+const addUserToVenueProfile = require('../../hooks/add-user-to-venue-profile');
+
 module.exports = {
   before: {
     all: [ authenticate('jwt') ],
     find: [],
     get: [],
-    create: [],
+    create: [addUserToVenueProfile()],
     update: [],
     patch: [],
     remove: []
