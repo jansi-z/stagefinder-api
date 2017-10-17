@@ -6,8 +6,7 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
 
     const user = hook.params.user;
 
-    hook.data = { ...hook.data, userId: user._id }
-
+    hook.data = { ...hook.data, userId: user._id } // eslint-disable-line
     return hook;
   };
 };
