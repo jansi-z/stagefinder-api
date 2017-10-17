@@ -6,13 +6,13 @@ const addVenueToUser = require('../../hooks/add-venue-to-user');
 
 module.exports = {
   before: {
-    all: [ authenticate('jwt') ],
+    all: [],
     find: [],
     get: [],
-    create: [addUserToVenueProfile()],
-    update: [],
-    patch: [],
-    remove: []
+    create: [authenticate('jwt'), addUserToVenueProfile()],
+    update: [authenticate('jwt')],
+    patch: [authenticate('jwt')],
+    remove: [authenticate('jwt')]
   },
 
   after: {
