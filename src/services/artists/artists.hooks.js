@@ -6,13 +6,13 @@ const addUserToArtistProfile = require('../../hooks/add-user-to-artist-profile')
 
 module.exports = {
   before: {
-    all: [ authenticate('jwt') ],
+    all: [],
     find: [],
     get: [],
-    create: [addUserToArtistProfile()],
-    update: [],
-    patch: [],
-    remove: []
+    create: [authenticate('jwt'), addUserToArtistProfile()],
+    update: [authenticate('jwt')],
+    patch: [authenticate('jwt')],
+    remove: [authenticate('jwt')]
   },
 
   after: {
