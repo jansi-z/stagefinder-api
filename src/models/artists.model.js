@@ -16,6 +16,12 @@ module.exports = function (app) {
     quote: { type: String },
     video: { type: String },
     bio: { type: String },
+
+    soundcloud: { type: String },
+    spotify: { type: String },
+    youtube: { type: String },
+    facebook: { type: String },
+
     dateIds: [],
 
     createdAt: { type: Date, default: Date.now },
