@@ -1,6 +1,7 @@
 const { authenticate } = require('feathers-authentication').hooks;
 const commonHooks = require('feathers-hooks-common');
 const { restrictToOwner } = require('feathers-authentication-hooks');
+const { populate } = require('feathers-hooks-common');
 
 const { hashPassword } = require('feathers-authentication-local').hooks;
 const restrict = [
@@ -10,6 +11,24 @@ const restrict = [
     ownerField: '_id'
   })
 ];
+
+const artistSchema = {
+  include: {
+    service: 'artists',
+    nameAs: 'artistProfile',
+    parentField: 'artistProfileId',
+    childField: '_id',
+  }
+};
+
+const venueSchema = {
+  include: {
+    service: 'venues',
+    nameAs: 'venueProfile',
+    parentField: 'venueProfileId',
+    childfield: '_id'
+  }
+};
 
 module.exports = {
   before: {
@@ -27,7 +46,9 @@ module.exports = {
       commonHooks.when(
         hook => hook.params.provider,
         commonHooks.discard('password')
-      )
+      ),
+      populate({ schema: artistSchema }),
+      populate({ schema: venueSchema })
     ],
     find: [],
     get: [],
