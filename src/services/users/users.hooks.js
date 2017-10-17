@@ -26,7 +26,7 @@ const venueSchema = {
     service: 'venues',
     nameAs: 'venueProfile',
     parentField: 'venueProfileId',
-    childfield: '_id'
+    childField: '_id'
   }
 };
 
