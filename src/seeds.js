@@ -101,80 +101,150 @@ const user19 = {
 };
 
 const user20 = {
-  email: 'venue9@stagefinder.com',
+  email: 'venue10@stagefinder.com',
   password: 'abcd1234'
 };
 
 const feathersClient = feathers();
 
 const newArtist1 = {
-  name: 'Radiohead',
-  photo: 'https://express-k.kz/upload/iblock/404/404ddda17b2bcfaedcff63948ad8377b.jpg',
-  description: 'We play a mix between schlager, rock \'n roll, and psychedelic folk',
+  name: 'Enigma',
+  photo: 'http://res.cloudinary.com/meganc94/image/upload/v1508315917/Image_31_at_frame_1_c2zyvj.jpg',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Nullam vehicula ipsum a arcu cursus. ',
   city: 'IJmuiden',
+  quote: '"Jouw meest tekenende songtekst of quote in 70 karakters."',
+  video: 'https://www.youtube.com/embed/d_syeslaIqc',
+  bio: 'Dignissim amet est. Congue augue lectus et feugiat vitae sed nisl platea molestie orci lectus. Mi nisi amet tellus quam imperdiet luctus vel ac. Pede dolor mi. At fermentum lorem purus mauris suspendisse.',
+  soundcloud: 'https://soundcloud.com/',
+  spotify: 'https://www.spotify.com/',
+  youtube: 'https://www.youtube.com/watch?v=d_syeslaIqc',
+  facebook: 'https://www.facebook.com/mattsimonsmusicpage/',
 };
 
 const newArtist2 = {
-  name: 'The Beatles',
-  photo: 'http://www.beatlesource.com/savage/1962/62.03.xx%20suits/02.jpg',
-  description: 'We aim to recreate the 60s sound',
+  name: 'Ben Cameron',
+  photo: 'http://res.cloudinary.com/meganc94/image/upload/v1508315965/Image_64_at_frame_1_a1pcia.jpg',
+  description: 'Dignissim amet est. Congue augue lectus et feugiat vitae sed nisl platea molestie orci lectus. Mi nisi amet tellus quam imperdiet luctus vel ac. Pede dolor mi. At fermentum lorem purus mauris suspendisse.',
   city: 'Leeuwarden',
+  quote: '"Jouw meest tekenende songtekst of quote in 70 karakters."',
+  video: 'https://www.youtube.com/embed/d_syeslaIqc',
+  bio: 'Dignissim amet est. Congue augue lectus et feugiat vitae sed nisl platea molestie orci lectus. Mi nisi amet tellus quam imperdiet luctus vel ac. Pede dolor mi. At fermentum lorem purus mauris suspendisse.',
+  soundcloud: 'https://soundcloud.com/',
+  spotify: 'https://www.spotify.com/',
+  youtube: 'https://www.youtube.com/watch?v=d_syeslaIqc',
+  facebook: 'https://www.facebook.com/mattsimonsmusicpage/',
 };
 
 const newArtist3 ={
-  name: 'Kanye West',
-  photo: 'http://s3.amazonaws.com/hiphopdx-production/2016/12/kanye-west-pink-hair-700x485.jpg',
-  description: 'I rap about stuff and love fish-sticks',
+  name: 'Leona',
+  photo: 'https://upload.wikimedia.org/wikipedia/commons/8/84/Clara_Blume_-_The_Singer_Songwriter_Circus_-_popfest_Wien_2014_18.jpg',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Nullam vehicula ipsum a arcu cursus. ',
   city: 'Den Helder',
+  quote: '"Jouw meest tekenende songtekst of quote in 70 karakters."',
+  video: 'https://www.youtube.com/embed/d_syeslaIqc',
+  bio: 'Dignissim amet est. Congue augue lectus et feugiat vitae sed nisl platea molestie orci lectus. Mi nisi amet tellus quam imperdiet luctus vel ac. Pede dolor mi. At fermentum lorem purus mauris suspendisse.',
+  soundcloud: 'https://soundcloud.com/',
+  spotify: 'https://www.spotify.com/',
+  youtube: 'https://www.youtube.com/watch?v=d_syeslaIqc',
+  facebook: 'https://www.facebook.com/mattsimonsmusicpage/',
 };
 
 const newArtist4 = {
-  name: 'Elliot Smith',
-  photo: 'http://www.rockaxis.com.co/sites/default/files/node/novedades/imagen/121084.jpg',
-  description: 'I sound monotone but you\'ll get used to me',
+  name: 'Brian Fors',
+  photo: 'https://c.pxhere.com/photos/ed/bf/j_cole_music_rap_rapper_performance_festival_hip_hop_microphone-1192104.jpg!d',
+  description: 'Dignissim amet est. Congue augue lectus et feugiat vitae sed nisl platea molestie orci lectus. Mi nisi amet tellus quam imperdiet luctus vel ac. Pede dolor mi. At fermentum lorem purus mauris suspendisse.',
   city: 'Maastricht',
+  quote: '"Jouw meest tekenende songtekst of quote in 70 karakters."',
+  video: 'https://www.youtube.com/embed/d_syeslaIqc',
+  bio: 'Dignissim amet est. Congue augue lectus et feugiat vitae sed nisl platea molestie orci lectus. Mi nisi amet tellus quam imperdiet luctus vel ac. Pede dolor mi. At fermentum lorem purus mauris suspendisse.',
+  soundcloud: 'https://soundcloud.com/',
+  spotify: 'https://www.spotify.com/',
+  youtube: 'https://www.youtube.com/watch?v=d_syeslaIqc',
+  facebook: 'https://www.facebook.com/mattsimonsmusicpage/',
 };
 
 const newArtist5 = {
-  name: 'Jason Mraz',
-  photo: 'http://musicserver.cz/img/big/80725.jpg',
-  description: 'I sing emotional songs',
+  name: 'Eileen',
+  photo: 'https://upload.wikimedia.org/wikipedia/commons/7/72/Country_singer_Cam_at_Bra_Country_Concert.jpg',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Nullam vehicula ipsum a arcu cursus. ',
   city: 'Urk',
+  quote: '"Jouw meest tekenende songtekst of quote in 70 karakters."',
+  video: 'https://www.youtube.com/embed/d_syeslaIqc',
+  bio: 'Dignissim amet est. Congue augue lectus et feugiat vitae sed nisl platea molestie orci lectus. Mi nisi amet tellus quam imperdiet luctus vel ac. Pede dolor mi. At fermentum lorem purus mauris suspendisse.',
+  soundcloud: 'https://soundcloud.com/',
+  spotify: 'https://www.spotify.com/',
+  youtube: 'https://www.youtube.com/watch?v=d_syeslaIqc',
+  facebook: 'https://www.facebook.com/mattsimonsmusicpage/',
 };
 
 const newArtist6 = {
-  name: 'Taylor Swift',
-  photo: 'https://askingradio.com/wp-content/uploads/2017/10/Taylor-Swift-revenge-nerds-e1507288366571-700x485.jpg',
-  description: 'I do have many ex-boyfriends and I tend to sing about them',
+  name: 'James Brown',
+  photo: 'http://res.cloudinary.com/meganc94/image/upload/v1508315898/Image_23_at_frame_1_gm7m9b.jpg',
+  description: 'Dignissim amet est. Congue augue lectus et feugiat vitae sed nisl platea molestie orci lectus. Mi nisi amet tellus quam imperdiet luctus vel ac. Pede dolor mi. At fermentum lorem purus mauris suspendisse.',
   city: 'Enschede',
+  quote: '"Jouw meest tekenende songtekst of quote in 70 karakters."',
+  video: 'https://www.youtube.com/embed/d_syeslaIqc',
+  bio: 'Dignissim amet est. Congue augue lectus et feugiat vitae sed nisl platea molestie orci lectus. Mi nisi amet tellus quam imperdiet luctus vel ac. Pede dolor mi. At fermentum lorem purus mauris suspendisse.',
+  soundcloud: 'https://soundcloud.com/',
+  spotify: 'https://www.spotify.com/',
+  youtube: 'https://www.youtube.com/watch?v=d_syeslaIqc',
+  facebook: 'https://www.facebook.com/mattsimonsmusicpage/',
 };
 
 const newArtist7 ={
-  name: 'Black Rebel Motorcycle club',
-  photo: 'https://s-media-cache-ak0.pinimg.com/originals/3e/ac/6b/3eac6be193567160f4f5e2ca2359e476.jpg',
-  description: 'rocknroll ish',
+  name: 'Jordan Nyx',
+  photo: 'https://upload.wikimedia.org/wikipedia/commons/b/bd/Snow_White_%28Singer%29_ZMF_2015_jm42086.jpg',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Nullam vehicula ipsum a arcu cursus. ',
   city: 'Assen',
+  quote: '"Jouw meest tekenende songtekst of quote in 70 karakters."',
+  video: 'https://www.youtube.com/embed/d_syeslaIqc',
+  bio: 'Dignissim amet est. Congue augue lectus et feugiat vitae sed nisl platea molestie orci lectus. Mi nisi amet tellus quam imperdiet luctus vel ac. Pede dolor mi. At fermentum lorem purus mauris suspendisse.',
+  soundcloud: 'https://soundcloud.com/',
+  spotify: 'https://www.spotify.com/',
+  youtube: 'https://www.youtube.com/watch?v=d_syeslaIqc',
+  facebook: 'https://www.facebook.com/mattsimonsmusicpage/',
 };
 
 const newArtist8 = {
-  name: 'Skrillex',
-  photo: 'https://img.memecdn.com/where-skrillex-gets-his-inspiration_o_762360.jpg',
-  description: 'I create noise and people used to like it',
+  name: 'Nora David',
+  photo: 'http://jazzfest.dk/images/bands/big/2027.jpg',
+  description: 'Dignissim amet est. Congue augue lectus et feugiat vitae sed nisl platea molestie orci lectus. Mi nisi amet tellus quam imperdiet luctus vel ac. Pede dolor mi. At fermentum lorem purus mauris suspendisse.',
   city: 'Breda',
+  quote: '"Jouw meest tekenende songtekst of quote in 70 karakters."',
+  video: 'https://www.youtube.com/embed/d_syeslaIqc',
+  bio: 'Dignissim amet est. Congue augue lectus et feugiat vitae sed nisl platea molestie orci lectus. Mi nisi amet tellus quam imperdiet luctus vel ac. Pede dolor mi. At fermentum lorem purus mauris suspendisse.',
+  soundcloud: 'https://soundcloud.com/',
+  spotify: 'https://www.spotify.com/',
+  youtube: 'https://www.youtube.com/watch?v=d_syeslaIqc',
+  facebook: 'https://www.facebook.com/mattsimonsmusicpage/',
 };
 
 const newArtist9 = {
-  name: 'U2',
-  photo: 'https://i1.wp.com/news.u2fanlife.com/wp-content/uploads/2013/10/u2-new-york-octubre-2013.jpg?ssl=1',
-  description: 'We are trying to save the world while making shitty music',
+  name: 'B430',
+  photo: 'http://res.cloudinary.com/meganc94/image/upload/v1508315881/Image_16_at_frame_1_jlthbr.png',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Nullam vehicula ipsum a arcu cursus. ',
   city: 'Eindhoven',
+  quote: '"Jouw meest tekenende songtekst of quote in 70 karakters."',
+  video: 'https://www.youtube.com/embed/d_syeslaIqc',
+  bio: 'Dignissim amet est. Congue augue lectus et feugiat vitae sed nisl platea molestie orci lectus. Mi nisi amet tellus quam imperdiet luctus vel ac. Pede dolor mi. At fermentum lorem purus mauris suspendisse.',
+  soundcloud: 'https://soundcloud.com/',
+  spotify: 'https://www.spotify.com/',
+  youtube: 'https://www.youtube.com/watch?v=d_syeslaIqc',
+  facebook: 'https://www.facebook.com/mattsimonsmusicpage/',
 };
 
 const newArtist10 = {
-  name: 'Beyonce',
-  photo: 'http://www.urbaninsite.com/wp-content/uploads/2016/01/aa15.jpg',
-  description: 'I sing songs',
+  name: 'Faye',
+  photo: 'http://res.cloudinary.com/meganc94/image/upload/v1508315873/Image_6_at_frame_1_z1lpj3.jpg',
+  description: 'Dignissim amet est. Congue augue lectus et feugiat vitae sed nisl platea molestie orci lectus. Mi nisi amet tellus quam imperdiet luctus vel ac. Pede dolor mi. At fermentum lorem purus mauris suspendisse.',
   city: 'Groningen',
+  quote: '"Jouw meest tekenende songtekst of quote in 70 karakters."',
+  video: 'https://www.youtube.com/embed/d_syeslaIqc',
+  bio: 'Dignissim amet est. Congue augue lectus et feugiat vitae sed nisl platea molestie orci lectus. Mi nisi amet tellus quam imperdiet luctus vel ac. Pede dolor mi. At fermentum lorem purus mauris suspendisse.',
+  soundcloud: 'https://soundcloud.com/',
+  spotify: 'https://www.spotify.com/',
+  youtube: 'https://www.youtube.com/watch?v=d_syeslaIqc',
+  facebook: 'https://www.facebook.com/mattsimonsmusicpage/',
 };
 const newVenue1 = {
   name: '\'t Oude Pothuijs',
@@ -193,11 +263,11 @@ const newVenue2 = {
 };
 
 const newVenue3 = {
-  name: 'Heineken Music Hall',
+  name: 'AFAS Live',
   photo: 'https://image-ticketfly.imgix.net/00/02/36/27/09-og.jpg?w=700&h=485',
   city: 'Amsterdam',
   address: 'ArenA Boulevard 590',
-  description: 'muziekjes',
+  description: 'AFAS Live is de locatie die een totaalbeleving biedt aan liefhebbers van live muziek en entertainment. Bekijk onze agenda van komende concerten en ...',
 };
 const newVenue4 = {
   name: 'Tivoli Vredenburg',
