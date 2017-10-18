@@ -6,7 +6,6 @@ const JOIN_EVENT = 'JOIN_EVENT';
 module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
   return function updateArtist (hook) {
     const { type, payload } = hook.data;
-    const artistId = hook.params.user.artistProfileId;
 
     switch(type) {
 
@@ -16,12 +15,14 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
     }
 
     case JOIN_EVENT : {
+      const artistId = hook.params.user.artistProfileId;
+
       return hook.app.service('events').patch(payload, {
         $addToSet: { artistIds: artistId }
       })
         .then(() => {
           return hook.app.service('artists').patch(artistId, {
-            $addToSet: { eventIds: payload }
+            type: PROFILE_UPDATE, payload: { eventIds: payload }
           })
             .then(() => {
               return hook;
