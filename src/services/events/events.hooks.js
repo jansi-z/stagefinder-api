@@ -2,6 +2,8 @@ const { authenticate } = require('feathers-authentication').hooks;
 
 const addVenueToEvent = require('../../hooks/add-venue-to-event');
 
+const addEventToVenue = require('../../hooks/add-event-to-venue');
+
 module.exports = {
   before: {
     all: [ authenticate('jwt') ],
@@ -17,7 +19,7 @@ module.exports = {
     all: [],
     find: [],
     get: [],
-    create: [],
+    create: [addEventToVenue()],
     update: [],
     patch: [],
     remove: []

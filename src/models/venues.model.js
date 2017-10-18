@@ -15,7 +15,7 @@ module.exports = function (app) {
     address: { type: String, required: true},
     description: { type: String, required: true},
 
-    dateIds: [{ type: Schema.Types.ObjectId, ref: 'dates'}],
+    eventIds: [{ type: Schema.Types.ObjectId, ref: 'events'}],
 
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now }
