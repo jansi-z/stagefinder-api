@@ -22,7 +22,7 @@ module.exports = function (app) {
     youtube: { type: String },
     facebook: { type: String },
 
-    dateIds: [],
+    eventIds: [],
 
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now }
