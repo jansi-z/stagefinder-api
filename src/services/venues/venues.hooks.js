@@ -1,8 +1,18 @@
 const { authenticate } = require('feathers-authentication').hooks;
+const { populate } = require('feathers-hooks-common');
 
 const addUserToVenueProfile = require('../../hooks/add-user-to-venue-profile');
 
 const addVenueToUser = require('../../hooks/add-venue-to-user');
+
+const eventSchema = {
+  include: {
+    service: 'events',
+    nameAs: 'events',
+    parentField: 'eventIds',
+    childField: '_id',
+  }
+};
 
 module.exports = {
   before: {
@@ -16,7 +26,9 @@ module.exports = {
   },
 
   after: {
-    all: [],
+    all: [
+      populate({ schema: eventSchema })
+    ],
     find: [],
     get: [],
     create: [addVenueToUser()],
