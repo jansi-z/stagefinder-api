@@ -4,6 +4,8 @@ const addVenueToEvent = require('../../hooks/add-venue-to-event');
 
 const addEventToVenue = require('../../hooks/add-event-to-venue');
 
+const updateVenueAndArtistOnEventDeletion = require('../../hooks/update-venue-and-artist-on-event-deletion');
+
 module.exports = {
   before: {
     all: [ authenticate('jwt') ],
@@ -22,7 +24,7 @@ module.exports = {
     create: [addEventToVenue()],
     update: [],
     patch: [],
-    remove: []
+    remove: [updateVenueAndArtistOnEventDeletion()]
   },
 
   error: {
