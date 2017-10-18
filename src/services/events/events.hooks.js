@@ -27,13 +27,13 @@ const venueSchema = {
 
 module.exports = {
   before: {
-    all: [ authenticate('jwt') ],
+    all: [],
     find: [],
     get: [],
-    create: [addVenueToEvent()],
-    update: [],
-    patch: [],
-    remove: []
+    create: [authenticate('jwt'), addVenueToEvent()],
+    update: [authenticate('jwt')],
+    patch: [authenticate('jwt')],
+    remove: [authenticate('jwt')]
   },
 
   after: {
