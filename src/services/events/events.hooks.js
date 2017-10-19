@@ -25,15 +25,18 @@ const venueSchema = {
   }
 };
 
+const convertEventDateToDutchFormat = require('../../hooks/convert-event-date-to-dutch-format');
+
 module.exports = {
   before: {
     all: [],
     find: [],
     get: [],
-    create: [addVenueToEvent(),  authenticate('jwt') ],
+    create: [addVenueToEvent(),  authenticate('jwt'), convertEventDateToDutchFormat() ],
     update: [ authenticate('jwt') ],
     patch: [ authenticate('jwt') ],
     remove: [ authenticate('jwt') ]
+
   },
 
   after: {

@@ -12,7 +12,7 @@ module.exports = function (app) {
     photo: { type: String },
 
     time: { type: String, required: true },
-    date: { type: Date, required: true },
+    date: { type: String, required: true },
     paid: { type: Number, default: null },
     artistCount: { type: Number, required: true },
 
