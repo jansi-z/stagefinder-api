@@ -32,10 +32,11 @@ module.exports = {
     all: [],
     find: [],
     get: [],
-    create: [authenticate('jwt'), addVenueToEvent(), convertEventDateToDutchFormat()],
-    update: [authenticate('jwt')],
-    patch: [authenticate('jwt')],
-    remove: [authenticate('jwt')]
+    create: [addVenueToEvent(),  authenticate('jwt'), convertEventDateToDutchFormat() ],
+    update: [ authenticate('jwt') ],
+    patch: [ authenticate('jwt') ],
+    remove: [ authenticate('jwt') ]
+
   },
 
   after: {
