@@ -27,26 +27,29 @@ const venueSchema = {
 
 const convertEventDateToDutchFormat = require('../../hooks/convert-event-date-to-dutch-format');
 
+const sendEventToElasticsearch = require('../../hooks/send-event-to-elasticsearch');
+
 module.exports = {
   before: {
     all: [],
     find: [],
     get: [],
-    create: [addVenueToEvent(),  authenticate('jwt'), convertEventDateToDutchFormat() ],
-    update: [ authenticate('jwt') ],
-    patch: [ authenticate('jwt') ],
-    remove: [ authenticate('jwt') ]
+    create: [authenticate('jwt'), addVenueToEvent(),],
+    update: [authenticate('jwt')],
+    patch: [authenticate('jwt')],
+    remove: [authenticate('jwt')]
 
   },
 
   after: {
     all: [
       populate({ schema: artistSchema }),
-      populate({ schema: venueSchema })
+      populate({ schema: venueSchema }),
+      convertEventDateToDutchFormat()
     ],
     find: [],
     get: [],
-    create: [addEventToVenue()],
+    create: [addEventToVenue(), sendEventToElasticsearch()],
     update: [],
     patch: [],
     remove: [updateVenueAndArtistOnEventDeletion()]

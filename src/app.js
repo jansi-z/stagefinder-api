@@ -24,6 +24,25 @@ const mongoose = require('./mongoose');
 
 const app = feathers();
 
+const elasticsearch = require('elasticsearch');
+const service = require('feathers-elasticsearch');
+
+const eventService = service({
+  Model: new elasticsearch.Client({
+    host: 'localhost:9200',
+    apiVersion: '5.0'
+  }),
+  paginate: {
+    default: 10,
+    max: 50
+  },
+  elasticsearch: {
+    index: 'events',
+    type: 'event'
+  }
+});
+
+
 // Load app configuration
 app.configure(configuration());
 // Enable CORS, security, compression, favicon and body parsing
@@ -41,6 +60,7 @@ app.configure(hooks());
 app.configure(mongoose);
 app.configure(rest());
 app.configure(socketio());
+app.use('/search', eventService);
 
 // Configure other middleware (see `middleware/index.js`)
 app.configure(middleware);
