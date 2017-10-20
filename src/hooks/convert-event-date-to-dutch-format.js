@@ -16,13 +16,18 @@ function convertDate(originalDate){
 module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
   return function convertEventDateToDutchFormat (hook) {
 
-    if (hook.method === 'find'){
+    if (hook.method === 'find' && (hook.result.data)){
 
       hook.result.data = hook.result.data.map((event) => {
         return { ...event, dutchDate: convertDate(event.date) }
       })
 
       return hook;
+    }else if (hook.method === 'find'){
+
+      hook.result = hook.result.map((event) => {
+        return { ...event, dutchDate: convertDate(event.date) }
+      })
 
     }else{
       hook.result = { ...hook.result, dutchDate: convertDate(hook.result.date) }
