@@ -5,7 +5,7 @@ function convertDate(originalDate){
   const date = new Date(originalDate);
   const day = date.getDate();
   const weekday = date.getDay();
-  const month = (date.getMonth() + 1);
+  const month = date.getMonth();
   const year = date.getFullYear();
   const days = ['zondag', 'maandag', 'dinsdag', 'woensdag', 'donderdag', 'vrijdag', 'zaterdag'];
   const months = ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december'];
