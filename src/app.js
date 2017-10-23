@@ -27,9 +27,11 @@ const app = feathers();
 const elasticsearch = require('elasticsearch');
 const service = require('feathers-elasticsearch');
 
+const elasticsearchConnectionString = process.env.SEARCHBOX_URL;
+
 const eventService = service({
   Model: new elasticsearch.Client({
-    host: 'localhost:9200',
+    host: elasticsearchConnectionString,
     apiVersion: '5.0'
   }),
   paginate: {
