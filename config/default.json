@@ -18,9 +18,9 @@
       "header": {
         "type": "access"
       },
-      "audience": "https://yourdomain.com",
+      "audience": "https://cryptic-cliffs-86007.herokuapp.com",
       "subject": "anonymous",
-      "issuer": "feathers",
+      "issuer": "stagefinder-api",
       "algorithm": "HS256",
       "expiresIn": "1d"
     },
