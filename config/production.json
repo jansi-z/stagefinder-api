@@ -1,5 +1,5 @@
 {
   "host": "cryptic-cliffs-86007.herokuapp.com",
   "port": "PORT",
-  "mongodb": "mongolab-curved-15373"
+  "mongodb": "mongodb://heroku_fzqwqp3h:5qnlh9s67bs9h43ngigkrmhah6@ds229835.mlab.com:29835/heroku_fzqwqp3h"
 }
