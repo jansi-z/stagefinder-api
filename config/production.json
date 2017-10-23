@@ -1,4 +1,5 @@
 {
-  "host": "stagefinder-api-app.feathersjs.com",
-  "port": "PORT"
+  "host": "cryptic-cliffs-86007.herokuapp.com",
+  "port": "PORT",
+  "mongodb": "mongolab-curved-15373"
 }
